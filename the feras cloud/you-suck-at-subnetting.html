@@ -1,0 +1,2666 @@
+<!doctype html>
+<html lang="en">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TTDXZLG');</script>
+<!-- End Google Tag Manager -->
+<head>
+    
+              <meta name="csrf-param" content="authenticity_token">
+              <meta name="csrf-token" content="fBw8KPBO0isRFbiAeQ/TODFg2I16b8tnuQtScm4oC2HMF2Iqu865QjVuIm4Eudq4Oil0H/nTjiAyLEA0oJEhpw==">
+            
+    <title>
+        
+            You Suck At Subnetting 
+        
+    </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <meta name="description" content="" />
+    
+    <meta property="og:type" content="website">
+<meta property="og:url" content="https://academy.networkchuck.com/you-suck-at-subnetting">
+<meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:title" content="You Suck At Subnetting ">
+    <meta name="twitter:title" content="You Suck At Subnetting ">
+
+
+    <meta property="og:description" content="">
+    <meta name="twitter:description" content="">
+
+
+    
+        <link href="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2147658501/images/3f37db4-d3ff-223e-58b5-307a6d4fc66_favicon-32x32.png?v=2" rel="shortcut icon" />
+    
+    <link rel="canonical" href="you-suck-at-subnetting" />
+
+    <!-- Google Fonts ====================================================== -->
+    
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,700,400italic,700italic|Oswald:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    
+
+    <!-- Kajabi CSS ======================================================== -->
+    <link rel="stylesheet" media="screen" href="https://kajabi-app-assets.kajabi-cdn.com/assets/core-39d7ec8c864adbae305102afb66be7486f2dfa14daf2042501bc27b46117fc72.css" />
+
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" media="screen" href="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2155008837/assets/styles.css?1709817190295983" />
+
+    <!-- Customer CSS ====================================================== -->
+    <link rel="stylesheet" media="screen" href="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2155008837/assets/overrides.css?1709817190295983" />
+    <style>
+    /* Custom CSS Added Via Theme Settings */
+    /* This removes the shadow from the form button and creates a bit more spacing inside the button */
+
+.btn {
+padding: 12px 40px;
+-webkit-box-shadow: 0 0px 0px #f9f9f9;
+box-shadow: 0px 0px 0px #f9f9f9;
+}
+
+
+/* This increases the font size of the medium sized button */
+
+.btn--medium {
+font-size: 24px;
+}
+
+
+/* This increases the font size of the link lists */
+
+.link-list__link {
+font-size: 18px;
+}
+
+
+/* This makes the form fields rounded and increased the padding so that the text doesn't get cut off by the rounded corners */
+
+.form-control {
+border-radius: 30px;
+padding-left: 24px;
+padding-right: 24px;
+}
+
+
+/* This reduces the h1 font size of the blog post title on the blog feed page on desktop  */
+
+@media (min-width: 768px) {
+h1.blog-post-body__title {
+font-size: 58px !important;
+}
+}
+
+
+/* This moves the podcast intro section up higher so that it is behind the transparent header. Delete this code if not using a transparent header for the website theme */
+
+.podcast-intro { 
+margin-top: -80px !important;
+padding-top: 80px !important;
+}
+
+
+/* This moves the coaching product hero section up higher so that it is behind the transparent header. Delete this code if not using a transparent header for the website theme */
+
+.coaching-programs__container { 
+margin-top: -94px !important;
+}
+
+.coaching-programs__header  {
+padding-top: 94px !important;
+}
+
+
+/* This creates a new class for bulleted lists with black arrows */
+
+.bullet-arrow {
+list-style-type: none;
+}
+
+.bullet-arrow li {
+list-style-type: none;
+position: relative;
+padding-left: 6px;
+}
+
+.bullet-arrow li:before {
+content: '\2771 \2771';
+color: #000000;
+font-size: 16px;
+position: absolute;
+top: 6px;
+left: -20px;
+}
+
+
+/* This creates a new class for bulleted lists with pink arrows */
+
+.bullet-arrow-pink {
+list-style-type: none;
+}
+
+.bullet-arrow-pink li {
+list-style-type: none;
+position: relative;
+padding-left: 6px;
+}
+
+.bullet-arrow-pink li:before {
+content: '\2771 \2771';
+color: #FF65BE;
+font-size: 16px;
+position: absolute;
+top: 6px;
+left: -20px;
+}
+
+
+/* This creates a new class for bulleted lists with yellow arrows */
+
+.bullet-arrow-yellow {
+list-style-type: none;
+}
+
+.bullet-arrow-yellow li {
+list-style-type: none;
+position: relative;
+padding-left: 6px;
+}
+
+.bullet-arrow-yellow li:before {
+content: '\2771 \2771';
+color: #FEED00;
+font-size: 16px;
+position: absolute;
+top: 6px;
+left: -20px;
+}
+
+
+/* This creates a new class for bulleted lists with green arrows */
+
+.bullet-arrow-green {
+list-style-type: none;
+}
+
+.bullet-arrow-green li {
+list-style-type: none;
+position: relative;
+padding-left: 6px;
+}
+
+.bullet-arrow-green li:before {
+content: '\2771 \2771';
+color: #05b7b9;
+font-size: 16px;
+position: absolute;
+top: 6px;
+left: -20px;
+}
+
+
+/* This creates a new class for bulleted lists with blue arrows */
+
+.bullet-arrow-blue {
+list-style-type: none;
+}
+
+.bullet-arrow-blue li {
+list-style-type: none;
+position: relative;
+padding-left: 6px;
+}
+
+.bullet-arrow-blue li:before {
+content: '\2771 \2771';
+color: #5fd3fa;
+font-size: 16px;
+position: absolute;
+top: 6px;
+left: -20px;
+}
+</style>
+
+    <!-- Kajabi Editor Only CSS ============================================ -->
+    
+
+    <!-- Header hook ======================================================= -->
+    <script type="text/javascript">
+  var Kajabi = Kajabi || {};
+</script>
+<script type="text/javascript">
+  Kajabi.currentSiteUser = {
+    "id" : "-1",
+    "type" : "Guest",
+    "contactId" : "",
+  };
+</script>
+<script type="text/javascript">
+  Kajabi.theme = {
+    activeThemeName: "Creative 1695666426",
+    previewThemeId: null,
+    editor: false
+  };
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1NH6WMQGC3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1NH6WMQGC3');
+</script>
+<style type="text/css">
+  #editor-overlay {
+    display: none;
+    border-color: #2E91FC;
+    position: absolute;
+    background-color: rgba(46,145,252,0.05);
+    border-style: dashed;
+    border-width: 3px;
+    border-radius: 3px;
+    pointer-events: none;
+    cursor: pointer;
+    z-index: 10000000000;
+  }
+  .editor-overlay-button {
+    color: white;
+    background: #2E91FC;
+    border-radius: 2px;
+    font-size: 13px;
+    margin-left: -24px;
+    margin-top: -12px;
+    padding: 3px 10px;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:1.5px;
+
+    left: 50%;
+    top: 50%;
+    position: absolute;
+  }
+</style>
+<meta name='site_locale' content='en'>
+
+</head>
+<style>
+    body {
+    
+    
+    
+    }
+</style>
+<body id="encore-theme" class="background-unrecognized">
+
+
+<div id="section-header" data-section-id="header">
+
+<style>
+    /* Default Header Styles */
+    .header {
+    
+        background-color: #171723;
+    
+        font-size: 18px;
+    }
+    .header a,
+    .header a.link-list__link,
+    .header a.link-list__link:hover,
+    .header a.social-icons__icon,
+    .header .user__login a,
+    .header .dropdown__item a,
+    .header .dropdown__trigger:hover {
+        color: #cfcfe3;
+    }
+    .header .dropdown__trigger {
+        color: #cfcfe3 !important;
+    }
+    /* Mobile Header Styles */
+    @media (max-width: 767px) {
+        .header {
+        
+            font-size: 16px;
+        }
+    
+        .header .hamburger__slices .hamburger__slice {
+        
+            background-color: #cfcfe3;
+        
+        }
+    
+        .header a.link-list__link, .dropdown__item a, .header__content--mobile {
+            text-align: center;
+        }
+    
+        .header--overlay .header__content--mobile  {
+            padding-bottom: 20px;
+        }
+    }
+    /* Sticky Styles */
+    
+    .header.header--fixed {
+        background-color: #171723;
+    
+        background-color: ;
+    
+    
+        background-color: ;
+    
+    }
+    
+    
+    .header.header--fixed .hamburger__slice {
+    
+        background-color: ;
+    
+    }
+    
+</style>
+
+<div class="hidden">
+    
+        
+    
+        
+    
+        
+    
+    
+    
+    
+</div>
+
+<header  class="header header--nc header--overlay sticky   background-dark header--close-on-scroll" kjb-settings-id="sections_header_settings_background_color">
+    <div class="hello-bars">
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    
+        <div class="header__wrap">
+            <div class="header__content header__content--desktop background-dark">
+                <div class="container header__container media justify-content-left">
+                    
+                        
+                                <style>
+    @media (min-width: 768px) {
+        #block-1555988494486 {
+            text-align: left;
+        }
+    }
+</style>
+
+<div id="block-1555988494486" class="header__block header__block--logo header__block--show header__switch-content stretch" kjb-settings-id="sections_header_blocks_1555988494486_settings_stretch">
+    <style>
+    #block-1555988494486 {
+        line-height: 1;
+    }
+    #block-1555988494486 .logo__image {
+        display: block;
+        width: 41px;
+    }
+    #block-1555988494486 .logo__text {
+        color: ;
+    }
+</style>
+
+<a class="logo" href="index.html">
+    
+        
+            <img class="logo__image" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153582899/settings_images/e05b7a-725c-ea4-584d-813d3e45561_a0372443-437b-4642-b63d-4a128f21323d.png" kjb-settings-id="sections_header_blocks_1555988494486_settings_logo" alt="NetworkChuck" />
+        
+    
+</a>
+</div>
+                            
+                    
+                        
+                                <style>
+    @media (min-width: 768px) {
+        #block-1555988491313 {
+            text-align: right;
+        }
+    }
+</style>
+
+<div id="block-1555988491313" class="header__block header__switch-content header__block--menu stretch" kjb-settings-id="sections_header_blocks_1555988491313_settings_stretch">
+    <div class="link-list justify-content-right" kjb-settings-id="sections_header_blocks_1555988491313_settings_menu">
+    
+        <a class="link-list__link" href="index.html"  >Home</a>
+    
+        <a class="link-list__link" href="courses"  >Courses</a>
+    
+        <a class="link-list__link" href="https://store.networkchuck.com/" target="_blank"  >Shop</a>
+    
+        <a class="link-list__link" href="https://networkchuck.com/contact/" target="_blank"  >Contact</a>
+    
+        <a class="link-list__link" href="https://networkchuck.com/about/" target="_blank"  >About</a>
+    
+</div>
+</div>
+                            
+                    
+                        
+                                <style>
+    @media (min-width: 768px) {
+        #block-1555988487706 {
+            text-align: right;
+        }
+    }
+</style>
+
+<div id="block-1555988487706" class="header__block header__switch-content header__block--user " kjb-settings-id="sections_header_blocks_1555988487706_settings_stretch">
+    <style>
+    /* Dropdown menu colors for desktop */
+    @media (min-width: 768px) {
+        #block-1555988487706 .dropdown__menu {
+            background: #feed00;
+            color: #000000;
+        }
+        #block-1555988487706 .dropdown__item a,
+        #block-1555988487706 {
+            color: #000000;
+        }
+    }
+    /* Mobile menu text alignment */
+    @media (max-width: 767px) {
+        #block-1555988487706 .dropdown__item a,
+        #block-1555988487706 .user__login a {
+            text-align: center;
+        }
+    }
+</style>
+
+<div class="user" kjb-settings-id="sections_header_blocks_1555988487706_settings_language_login">
+    
+        <span class="user__login" kjb-settings-id="language_login"><a href="https://academy.networkchuck.com/login">LOG IN</a></span>
+    
+</div>
+</div>
+                            
+                    
+                    
+                        <div class="hamburger hidden--desktop" kjb-settings-id="sections_header_settings_hamburger_color">
+                            <div class="hamburger__slices">
+                                <div class="hamburger__slice hamburger--slice-1"></div>
+                                <div class="hamburger__slice hamburger--slice-2"></div>
+                                <div class="hamburger__slice hamburger--slice-3"></div>
+                                <div class="hamburger__slice hamburger--slice-4"></div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="header__content header__content--mobile">
+                <div class="header__switch-content header__spacer"></div>
+            </div>
+        </div>
+    
+</header>
+
+</div>
+<main>
+    <div data-dynamic-sections=raspberry_pi_projects_copy_2><div id="section-1686051484143" data-section-id="1686051484143"><style>
+    
+    #section-1686051484143 .section__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #131b23;
+    }
+    #section-1686051484143 .sizer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #section-1686051484143 .container {
+        max-width: calc(1260px + 10px + 10px);
+        padding-right: 10px;
+        padding-left: 10px;
+    
+    }
+    #section-1686051484143 .row {
+    
+    }
+    #section-1686051484143 .container--full {
+        width: 100%;
+        max-width: calc(100% + 10px + 10px);
+    }
+    @media (min-width: 768px) {
+    
+        #section-1686051484143 .sizer {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        #section-1686051484143 .container {
+            max-width: calc(1260px + 40px + 40px);
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+        #section-1686051484143 .container--full {
+            max-width: calc(100% + 40px + 40px);
+        }
+    }
+    
+    
+</style>
+
+<section id="" kjb-settings-id="sections_1686051484143_settings_background_color"
+         class="section banner-hero--nc course
+  
+  
+   background-dark "
+         data-reveal-event=""
+         data-reveal-offset=""
+         data-reveal-units="seconds">
+    <div class="sizer ">
+        
+        <div class="section__overlay"></div>
+        <div class="container ">
+            <div class="row align-items-center justify-content-between">
+                
+                    
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1685611905_0, [data-slick-id="1685611905_0"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1685611905_0 .block, [data-slick-id="1685611905_0"] .block {
+        /* border settings */
+        border: 4px none black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        /* default padding for mobile */
+    
+    
+    
+        /* mobile padding overrides */
+    
+    
+    
+    
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1685611905_0, [data-slick-id="1685611905_0"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1685611905_0 .block, [data-slick-id="1685611905_0"] .block {
+            /* default padding for desktop  */
+        
+        
+            /* desktop padding overrides */
+        
+        
+        
+        
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1685611905_0, [data-slick-id="1685611905_0"] {
+            text-align: left;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1685611905_0"
+        class="
+  block-type--text
+  text-left
+  
+  col-5
+  
+  
+  
+    
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units="seconds"
+        
+            kjb-settings-id="sections_1686051484143_blocks_1685611905_0_settings_width"
+          >
+    <div class="block
+    box-shadow-none
+    "
+        
+         data-aos="none"
+    data-aos-delay="0"
+    data-aos-duration="0"
+    
+>
+    
+    <style>
+    
+    #block-1577982541036_0 .btn {
+        margin-top: 1rem;
+    }
+</style>
+
+<h2 class="section__heading section__heading-ornament"><span>You SUCK at Subnetting!</span></h2>
+<p><span>Master Subnetting and IP addressing with this foundational course.</span></p>
+
+    
+
+
+
+
+
+
+<style>
+    #block-1685611905_0 .btn,
+    [data-slick-id="1685611905_0"] .block .btn {
+        color: #ffffff;
+        border-color: #000000;
+        border-radius: 30px;
+        background-color: #000000;
+    }
+    #block-1685611905_0 .btn--outline,
+    [data-slick-id="1685611905_0"] .block .btn--outline {
+        background: transparent;
+        color: #000000;
+    }
+</style>
+
+
+
+    
+
+
+
+    
+    <a class="btn btn1 btn--solid btn--medium btn--auto" href="https://academy.networkchuck.com/resource_redirect/offers/kn6RoaLk"   kjb-settings-id="sections_1686051484143_blocks_1685611905_0_settings_btn_background_color" role="button">
+        
+            Buy for $12.99
+        
+        
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 12H22" stroke="#160E08" stroke-width="2" stroke-miterlimit="10"></path>
+                <path d="M15 5L22 12L15 19" stroke="#160E08" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
+            </svg>
+        
+        
+    </a>
+
+
+
+
+    
+
+
+
+
+
+
+<style>
+    #block-1685611905_0 .btn,
+    [data-slick-id="1685611905_0"] .block .btn {
+        color: ;
+        border-color: ;
+        border-radius: px;
+        background-color: ;
+    }
+    #block-1685611905_0 .btn--outline,
+    [data-slick-id="1685611905_0"] .block .btn--outline {
+        background: transparent;
+        color: ;
+    }
+</style>
+
+
+
+    
+
+
+
+    
+    <a class="btn btn2 btn-- btn-- btn--" href="networkchuck-academy"   kjb-settings-id="sections_1686051484143_blocks_1685611905_0_settings_btn_background_color_2" role="button">
+        
+            Join NetworkChuck Academy
+        
+        
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 12H22" stroke="#160E08" stroke-width="2" stroke-miterlimit="10"></path>
+                <path d="M15 5L22 12L15 19" stroke="#160E08" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
+            </svg>
+        
+        
+    </a>
+
+
+
+</div>
+</div>
+
+                
+                    
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1685980950815, [data-slick-id="1685980950815"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1685980950815 .block, [data-slick-id="1685980950815"] .block {
+        /* border settings */
+        border: 4px none black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        /* default padding for mobile */
+    
+    
+    
+        /* mobile padding overrides */
+    
+        padding: 0;
+    
+    
+    
+    
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1685980950815, [data-slick-id="1685980950815"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1685980950815 .block, [data-slick-id="1685980950815"] .block {
+            /* default padding for desktop  */
+        
+        
+            /* desktop padding overrides */
+        
+            padding: 0;
+        
+        
+        
+        
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1685980950815, [data-slick-id="1685980950815"] {
+            text-align: ;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1685980950815"
+        class="
+  block-type--video
+  text-
+  
+  col-5
+  
+  
+  
+    
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units="seconds"
+        
+            kjb-settings-id="sections_1686051484143_blocks_1685980950815_settings_width"
+          >
+    <div class="block
+    box-shadow-none
+    "
+        
+         data-aos="none"
+    data-aos-delay="0"
+    data-aos-duration="0"
+    
+>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="video">
+    
+        <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153582899/settings_images/71f16b0-c60f-8eb7-2b06-2eeea7a35b3_886bcb8d-1e6e-4de3-a1a0-37c53f89ddce.png" alt="Video Poster Image" />
+    
+</div>
+</div>
+</div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+</div><div id="section-1686051484144" data-section-id="1686051484144"><style>
+    
+    #section-1686051484144 .section__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #131b23;
+    }
+    #section-1686051484144 .sizer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #section-1686051484144 .container {
+        max-width: calc(1260px + 10px + 10px);
+        padding-right: 10px;
+        padding-left: 10px;
+    
+    }
+    #section-1686051484144 .row {
+    
+    }
+    #section-1686051484144 .container--full {
+        width: 100%;
+        max-width: calc(100% + 10px + 10px);
+    }
+    @media (min-width: 768px) {
+    
+        #section-1686051484144 .sizer {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        #section-1686051484144 .container {
+            max-width: calc(1260px + 40px + 40px);
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+        #section-1686051484144 .container--full {
+            max-width: calc(100% + 40px + 40px);
+        }
+    }
+    
+    
+</style>
+
+<section id="" kjb-settings-id="sections_1686051484144_settings_background_color"
+         class="section 
+  
+  
+   background-dark "
+         data-reveal-event=""
+         data-reveal-offset=""
+         data-reveal-units="seconds">
+    <div class="sizer ">
+        
+        <div class="section__overlay"></div>
+        <div class="container ">
+            <div class="row align-items-center justify-content-center">
+                
+                    
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1685714127944, [data-slick-id="1685714127944"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1685714127944 .block, [data-slick-id="1685714127944"] .block {
+        /* border settings */
+        border: 4px  black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        background-color: ;
+    
+        /* default padding for mobile */
+    
+        padding: 20px;
+    
+    
+        padding: 20px;
+    
+    
+    
+        padding: 20px;
+    
+    
+        /* mobile padding overrides */
+    
+    
+        padding-top: 0px;
+    
+    
+        padding-right: 0px;
+    
+    
+        padding-bottom: 0px;
+    
+    
+        padding-left: 0px;
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1685714127944, [data-slick-id="1685714127944"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1685714127944 .block, [data-slick-id="1685714127944"] .block {
+            /* default padding for desktop  */
+        
+            padding: 30px;
+        
+        
+        
+            padding: 30px;
+        
+        
+            /* desktop padding overrides */
+        
+        
+            padding-top: 0px;
+        
+        
+            padding-right: 0px;
+        
+        
+            padding-bottom: 0px;
+        
+        
+            padding-left: 0px;
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1685714127944, [data-slick-id="1685714127944"] {
+            text-align: ;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1685714127944"
+        class="
+  block-type--product_summary
+  text-
+  
+  col-
+  
+  
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units=""
+        
+            kjb-settings-id="sections_1686051484144_blocks_1685714127944_settings_width"
+          >
+    <div class="block
+    box-shadow-
+    "
+        
+         data-aos="-"
+    data-aos-delay=""
+    data-aos-duration=""
+    
+>
+    
+    <div class="product-summary">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="panel__block headline">
+                        ABOUT THIS COURSE
+                        <div class="meta">
+                            
+                                <div class="meta__total-completion"><?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+     y="0px" viewBox="0 0 122.88 101.37" style="enable-background:new 0 0 122.88 101.37" xml:space="preserve"><g>
+        <path d="M12.64,77.27l0.31-54.92h-6.2v69.88c8.52-2.2,17.07-3.6,25.68-3.66c7.95-0.05,15.9,1.06,23.87,3.76 c-4.95-4.01-10.47-6.96-16.36-8.88c-7.42-2.42-15.44-3.22-23.66-2.52c-1.86,0.15-3.48-1.23-3.64-3.08 C12.62,77.65,12.62,77.46,12.64,77.27L12.64,77.27z M103.62,19.48c-0.02-0.16-0.04-0.33-0.04-0.51c0-0.17,0.01-0.34,0.04-0.51V7.34 c-7.8-0.74-15.84,0.12-22.86,2.78c-6.56,2.49-12.22,6.58-15.9,12.44V85.9c5.72-3.82,11.57-6.96,17.58-9.1 c6.85-2.44,13.89-3.6,21.18-3.02V19.48L103.62,19.48z M110.37,15.6h9.14c1.86,0,3.37,1.51,3.37,3.37v77.66 c0,1.86-1.51,3.37-3.37,3.37c-0.38,0-0.75-0.06-1.09-0.18c-9.4-2.69-18.74-4.48-27.99-4.54c-9.02-0.06-18.03,1.53-27.08,5.52 c-0.56,0.37-1.23,0.57-1.92,0.56c-0.68,0.01-1.35-0.19-1.92-0.56c-9.04-4-18.06-5.58-27.08-5.52c-9.25,0.06-18.58,1.85-27.99,4.54 c-0.34,0.12-0.71,0.18-1.09,0.18C1.51,100.01,0,98.5,0,96.64V18.97c0-1.86,1.51-3.37,3.37-3.37h9.61l0.06-11.26 c0.01-1.62,1.15-2.96,2.68-3.28l0,0c8.87-1.85,19.65-1.39,29.1,2.23c6.53,2.5,12.46,6.49,16.79,12.25 c4.37-5.37,10.21-9.23,16.78-11.72c8.98-3.41,19.34-4.23,29.09-2.8c1.68,0.24,2.88,1.69,2.88,3.33h0V15.6L110.37,15.6z M68.13,91.82c7.45-2.34,14.89-3.3,22.33-3.26c8.61,0.05,17.16,1.46,25.68,3.66V22.35h-5.77v55.22c0,1.86-1.51,3.37-3.37,3.37 c-0.27,0-0.53-0.03-0.78-0.09c-7.38-1.16-14.53-0.2-21.51,2.29C79.09,85.15,73.57,88.15,68.13,91.82L68.13,91.82z M58.12,85.25 V22.46c-3.53-6.23-9.24-10.4-15.69-12.87c-7.31-2.8-15.52-3.43-22.68-2.41l-0.38,66.81c7.81-0.28,15.45,0.71,22.64,3.06 C47.73,78.91,53.15,81.64,58.12,85.25L58.12,85.25z"/>
+    </g></svg> <span>12 LESSONS</span></div>
+                            
+                        </div>
+                    </div>
+                    <div class="panel__block description">
+                        
+                            Our Subnetting and IP addressing fundamentals course will give you a comprehensive understanding of how IP addresses work, including effectively subnetting them for optimal network performance. You'll gain the skills needed to design and troubleshoot networks, and learn how to allocate IP addresses efficiently for different devices and network topologies.
+                        
+                    </div>
+                    <div class="panel__block cta--block">
+                        <a href="networkchuck-academy" class="btn__primary btn btn--nc"
+                           >
+
+                            Join the Academy
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 12H22" stroke="#160E08" stroke-width="2"
+                                      stroke-miterlimit="10"></path>
+                                <path d="M15 5L22 12L15 19" stroke="#160E08" stroke-width="2"
+                                      stroke-miterlimit="10" stroke-linecap="square"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    
+                        <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153582899/settings_images/c67eb53-d671-8553-4740-b32fdc66d0b_886bcb8d-1e6e-4de3-a1a0-37c53f89ddce.png"/>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+</div><div id="section-1686051484145" data-section-id="1686051484145"><style>
+    
+    #section-1686051484145 .section__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #131b23;
+    }
+    #section-1686051484145 .sizer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #section-1686051484145 .container {
+        max-width: calc(1260px + 10px + 10px);
+        padding-right: 10px;
+        padding-left: 10px;
+    
+    }
+    #section-1686051484145 .row {
+    
+    }
+    #section-1686051484145 .container--full {
+        width: 100%;
+        max-width: calc(100% + 10px + 10px);
+    }
+    @media (min-width: 768px) {
+    
+        #section-1686051484145 .sizer {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        #section-1686051484145 .container {
+            max-width: calc(1260px + 40px + 40px);
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+        #section-1686051484145 .container--full {
+            max-width: calc(100% + 40px + 40px);
+        }
+    }
+    
+    
+</style>
+
+<section id="" kjb-settings-id="sections_1686051484145_settings_background_color"
+         class="section product-curriculum
+  
+  
+   background-dark "
+         data-reveal-event=""
+         data-reveal-offset=""
+         data-reveal-units="seconds">
+    <div class="sizer ">
+        
+        <div class="section__overlay"></div>
+        <div class="container ">
+            <div class="row align-items-center justify-content-center">
+                
+                    
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1685719116113_0, [data-slick-id="1685719116113_0"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1685719116113_0 .block, [data-slick-id="1685719116113_0"] .block {
+        /* border settings */
+        border: 4px none black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        /* default padding for mobile */
+    
+    
+    
+        /* mobile padding overrides */
+    
+    
+    
+    
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1685719116113_0, [data-slick-id="1685719116113_0"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1685719116113_0 .block, [data-slick-id="1685719116113_0"] .block {
+            /* default padding for desktop  */
+        
+        
+            /* desktop padding overrides */
+        
+        
+        
+        
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1685719116113_0, [data-slick-id="1685719116113_0"] {
+            text-align: left;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1685719116113_0"
+        class="
+  block-type--text
+  text-left
+  
+  col-10
+  
+  
+  
+    
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units="seconds"
+        
+            kjb-settings-id="sections_1686051484145_blocks_1685719116113_0_settings_width"
+          >
+    <div class="block
+    box-shadow-none
+    "
+        
+         data-aos="none"
+    data-aos-delay="0"
+    data-aos-duration="0"
+    
+>
+    
+    <style>
+    
+    #block-1577982541036_0 .btn {
+        margin-top: 1rem;
+    }
+</style>
+
+<p>COURSE CURRICULUM</p>
+
+
+</div>
+</div>
+
+                
+                    
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1685720297097, [data-slick-id="1685720297097"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1685720297097 .block, [data-slick-id="1685720297097"] .block {
+        /* border settings */
+        border: 4px  black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        background-color: ;
+    
+        /* default padding for mobile */
+    
+        padding: 20px;
+    
+    
+        padding: 20px;
+    
+    
+    
+        padding: 20px;
+    
+    
+        /* mobile padding overrides */
+    
+    
+        padding-top: 0px;
+    
+    
+        padding-right: 0px;
+    
+    
+        padding-bottom: 0px;
+    
+    
+        padding-left: 0px;
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1685720297097, [data-slick-id="1685720297097"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1685720297097 .block, [data-slick-id="1685720297097"] .block {
+            /* default padding for desktop  */
+        
+            padding: 30px;
+        
+        
+        
+            padding: 30px;
+        
+        
+            /* desktop padding overrides */
+        
+        
+            padding-top: 0px;
+        
+        
+            padding-right: 0px;
+        
+        
+            padding-bottom: 0px;
+        
+        
+            padding-left: 0px;
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1685720297097, [data-slick-id="1685720297097"] {
+            text-align: ;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1685720297097"
+        class="
+  block-type--product_curriculum_category
+  text-
+  
+  col-
+  
+  
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units=""
+        
+            kjb-settings-id="sections_1686051484145_blocks_1685720297097_settings_width"
+          >
+    <div class="block
+    box-shadow-
+    "
+        
+         data-aos="-"
+    data-aos-delay=""
+    data-aos-duration=""
+    
+>
+    
+    <h3 class="product-curriculum-category">
+    Subnetting <?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>lock icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="lock-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path class="color-stroke" d="M4,7 L4,4.42857143 C4,2.53502371 5.56700338,1 7.5,1 C9.43299662,1 11,2.53502371 11,4.42857143 L11,7" id="Path" stroke="#748493" fill-rule="nonzero"></path>
+        <rect id="Rectangle" class="color-stroke" stroke="#748493" fill-rule="nonzero" x="1.5" y="7.5" width="12" height="11" rx="1"></rect>
+        <circle id="Oval" class="color-fill" fill="#748493" fill-rule="nonzero" cx="7.5" cy="13.5" r="1.5"></circle>
+    </g>
+</svg>
+</h3>
+</div>
+</div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+</div><div id="section-1686051484146" data-section-id="1686051484146"><style>
+    
+    #section-1686051484146 .section__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #131b23;
+    }
+    #section-1686051484146 .sizer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #section-1686051484146 .container {
+        max-width: calc(1260px + 10px + 10px);
+        padding-right: 10px;
+        padding-left: 10px;
+    
+    }
+    #section-1686051484146 .row {
+    
+    }
+    #section-1686051484146 .container--full {
+        width: 100%;
+        max-width: calc(100% + 10px + 10px);
+    }
+    @media (min-width: 768px) {
+    
+        #section-1686051484146 .sizer {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        #section-1686051484146 .container {
+            max-width: calc(1260px + 40px + 40px);
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+        #section-1686051484146 .container--full {
+            max-width: calc(100% + 40px + 40px);
+        }
+    }
+    
+    
+</style>
+
+<section id="" kjb-settings-id="sections_1686051484146_settings_background_color"
+         class="section pricing-table--nc-header
+  
+  
+   background-dark "
+         data-reveal-event=""
+         data-reveal-offset=""
+         data-reveal-units="seconds">
+    <div class="sizer ">
+        
+        <div class="section__overlay"></div>
+        <div class="container ">
+            <div class="row align-items-center justify-content-center">
+                
+                    
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1685720460470, [data-slick-id="1685720460470"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1685720460470 .block, [data-slick-id="1685720460470"] .block {
+        /* border settings */
+        border: 4px  black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        background-color: ;
+    
+        /* default padding for mobile */
+    
+        padding: 20px;
+    
+    
+        padding: 20px;
+    
+    
+    
+        padding: 20px;
+    
+    
+        /* mobile padding overrides */
+    
+    
+        padding-top: 0px;
+    
+    
+        padding-right: 0px;
+    
+    
+        padding-bottom: 0px;
+    
+    
+        padding-left: 0px;
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1685720460470, [data-slick-id="1685720460470"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1685720460470 .block, [data-slick-id="1685720460470"] .block {
+            /* default padding for desktop  */
+        
+            padding: 30px;
+        
+        
+        
+            padding: 30px;
+        
+        
+            /* desktop padding overrides */
+        
+        
+            padding-top: 0px;
+        
+        
+            padding-right: 0px;
+        
+        
+            padding-bottom: 0px;
+        
+        
+            padding-left: 0px;
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1685720460470, [data-slick-id="1685720460470"] {
+            text-align: ;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1685720460470"
+        class="
+  block-type--product_offer
+  text-
+  
+  col-
+  
+  
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units=""
+        
+            kjb-settings-id="sections_1686051484146_blocks_1685720460470_settings_width"
+          >
+    <div class="block
+    box-shadow-
+    "
+        
+         data-aos="-"
+    data-aos-delay=""
+    data-aos-duration=""
+    
+>
+    
+    <div class="product-offer">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                
+                    <div class="panel__block headline">
+                        Join the NetworkChuck Academy
+                    </div>
+                
+                
+                    <div class="panel__block description">
+                        Unlock this course, plus get access to our library of over 14 courses and 700 in-depth lessons ($199 value) by becoming a Premium member today.
+                    </div>
+                
+                <div class="panel__block cta--block">
+                    <a href="https://academy.networkchuck.com/resource_redirect/offers/qqemyFfV" class="btn__primary btn btn--nc">
+                        Join for $72/yr ($12/mo)
+                        
+                            <span class="discount-tag">50% Discount</span>
+                        
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12H22" stroke="#160E08" stroke-width="2"
+                                  stroke-miterlimit="10"></path>
+                            <path d="M15 5L22 12L15 19" stroke="#160E08" stroke-width="2"
+                                  stroke-miterlimit="10" stroke-linecap="square"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+                
+                    
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1685621038548_0, [data-slick-id="1685621038548_0"] {
+        margin-top: 40px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1685621038548_0 .block, [data-slick-id="1685621038548_0"] .block {
+        /* border settings */
+        border: 4px none black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        /* default padding for mobile */
+    
+    
+    
+        /* mobile padding overrides */
+    
+    
+    
+    
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1685621038548_0, [data-slick-id="1685621038548_0"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1685621038548_0 .block, [data-slick-id="1685621038548_0"] .block {
+            /* default padding for desktop  */
+        
+        
+            /* desktop padding overrides */
+        
+        
+            padding-top: 60px;
+        
+        
+        
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1685621038548_0, [data-slick-id="1685621038548_0"] {
+            text-align: center;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1685621038548_0"
+        class="
+  block-type--text
+  text-left
+  
+  col-10
+  
+  
+  
+    
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units="seconds"
+        
+            kjb-settings-id="sections_1686051484146_blocks_1685621038548_0_settings_width"
+          >
+    <div class="block
+    box-shadow-none
+    "
+        
+         data-aos="none"
+    data-aos-delay="0"
+    data-aos-duration="0"
+    
+>
+    
+    <style>
+    
+    #block-1577982541036_0 .btn {
+        margin-top: 1rem;
+    }
+</style>
+
+<h2 class="section__heading section__heading-ornament">NetworkChuck<br />Academy Perks</h2>
+
+
+</div>
+</div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+</div><div id="section-1686051484147" data-section-id="1686051484147"><style>
+    
+    #section-1686051484147 .section__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #131b23;
+    }
+    #section-1686051484147 .sizer {
+        padding-top: 0px;
+        padding-bottom: 40px;
+    }
+    #section-1686051484147 .container {
+        max-width: calc(1260px + 10px + 10px);
+        padding-right: 10px;
+        padding-left: 10px;
+    
+    }
+    #section-1686051484147 .row {
+    
+    }
+    #section-1686051484147 .container--full {
+        width: 100%;
+        max-width: calc(100% + 10px + 10px);
+    }
+    @media (min-width: 768px) {
+    
+        #section-1686051484147 .sizer {
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+        #section-1686051484147 .container {
+            max-width: calc(1260px + 40px + 40px);
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+        #section-1686051484147 .container--full {
+            max-width: calc(100% + 40px + 40px);
+        }
+    }
+    
+    
+</style>
+
+<section id="" kjb-settings-id="sections_1686051484147_settings_background_color"
+         class="section pricing-table--nc
+  
+  
+   background-dark "
+         data-reveal-event=""
+         data-reveal-offset=""
+         data-reveal-units="seconds">
+    <div class="sizer ">
+        
+        <div class="section__overlay"></div>
+        <div class="container ">
+            <div class="row align-items-center justify-content-center">
+                
+                    
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1685619986830, [data-slick-id="1685619986830"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1685619986830 .block, [data-slick-id="1685619986830"] .block {
+        /* border settings */
+        border: 4px  black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        background-color: ;
+    
+        /* default padding for mobile */
+    
+        padding: 20px;
+    
+    
+        padding: 20px;
+    
+    
+    
+        padding: 20px;
+    
+    
+        /* mobile padding overrides */
+    
+    
+        padding-top: 0px;
+    
+    
+        padding-right: 0px;
+    
+    
+        padding-bottom: 0px;
+    
+    
+        padding-left: 0px;
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1685619986830, [data-slick-id="1685619986830"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1685619986830 .block, [data-slick-id="1685619986830"] .block {
+            /* default padding for desktop  */
+        
+            padding: 30px;
+        
+        
+        
+            padding: 30px;
+        
+        
+            /* desktop padding overrides */
+        
+        
+            padding-top: 0px;
+        
+        
+            padding-right: 0px;
+        
+        
+            padding-bottom: 0px;
+        
+        
+            padding-left: 0px;
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1685619986830, [data-slick-id="1685619986830"] {
+            text-align: ;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1685619986830"
+        class="
+  block-type--nc_pricing
+  text-
+  
+  col-
+  
+  
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units=""
+        
+            kjb-settings-id="sections_1686051484147_blocks_1685619986830_settings_width"
+          >
+    <div class="block
+    box-shadow-
+    "
+        
+         data-aos="-"
+    data-aos-delay=""
+    data-aos-duration=""
+    
+>
+    
+    <div class="product-table-pricing">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                
+                <div class="panel__block pricing">
+                    <div class="nmpt ">
+                        <div class="nmpt-header">
+                            <h3>
+                                $12/mo
+                                
+                                    <small></small>
+                                
+                            </h3>
+                            <p>Monthly Membership</p>
+                        </div>
+                        <div class="nmpt-body">
+                            <div class="custom-theme">
+                                <div class="fr-view">
+                                    <ul>
+<li>14+ on-demand courses at your fingertips</li>
+<li>Over 700+ educational lessons</li>
+<li>195+ hours of expert content</li>
+</ul>
+                                </div>
+                                <div class="panel__block cta--block">
+                                    <a href="https://academy.networkchuck.com/resource_redirect/offers/5c3Y6k2u" class="btn__primary btn btn--nc">
+                                        ENROLL FOR $12/MO
+                                        
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 12H22" stroke="#160E08" stroke-width="2"
+                                                  stroke-miterlimit="10"></path>
+                                            <path d="M15 5L22 12L15 19" stroke="#160E08" stroke-width="2"
+                                                  stroke-miterlimit="10" stroke-linecap="square"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+                
+                    
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1685620167686, [data-slick-id="1685620167686"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1685620167686 .block, [data-slick-id="1685620167686"] .block {
+        /* border settings */
+        border: 4px  black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        background-color: ;
+    
+        /* default padding for mobile */
+    
+        padding: 20px;
+    
+    
+        padding: 20px;
+    
+    
+    
+        padding: 20px;
+    
+    
+        /* mobile padding overrides */
+    
+    
+        padding-top: 0px;
+    
+    
+        padding-right: 0px;
+    
+    
+        padding-bottom: 0px;
+    
+    
+        padding-left: 0px;
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1685620167686, [data-slick-id="1685620167686"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1685620167686 .block, [data-slick-id="1685620167686"] .block {
+            /* default padding for desktop  */
+        
+            padding: 30px;
+        
+        
+        
+            padding: 30px;
+        
+        
+            /* desktop padding overrides */
+        
+        
+            padding-top: 0px;
+        
+        
+            padding-right: 0px;
+        
+        
+            padding-bottom: 0px;
+        
+        
+            padding-left: 0px;
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1685620167686, [data-slick-id="1685620167686"] {
+            text-align: ;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1685620167686"
+        class="
+  block-type--nc_pricing
+  text-
+  
+  col-
+  
+  
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units=""
+        
+            kjb-settings-id="sections_1686051484147_blocks_1685620167686_settings_width"
+          >
+    <div class="block
+    box-shadow-
+    "
+        
+         data-aos="-"
+    data-aos-delay=""
+    data-aos-duration=""
+    
+>
+    
+    <div class="product-table-pricing">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                
+                <div class="panel__block pricing">
+                    <div class="nmpt gold">
+                        <div class="nmpt-header">
+                            <h3>
+                                $6/mo
+                                
+                                    <small>($72 Billed Annually)</small>
+                                
+                            </h3>
+                            <p>Annual Membership</p>
+                        </div>
+                        <div class="nmpt-body">
+                            <div class="custom-theme">
+                                <div class="fr-view">
+                                    <ul>
+<li>14+ on-demand courses at your fingertips</li>
+<li>Over 700+<span> </span>educational lessons</li>
+<li>195+ hours of expert content</li>
+<li>Special perks coming soon</li>
+</ul>
+                                </div>
+                                <div class="panel__block cta--block">
+                                    <a href="https://academy.networkchuck.com/resource_redirect/offers/qqemyFfV" class="btn__primary btn btn--nc">
+                                        ENROLL FOR $72/YEAR ($6/MO)
+                                        
+                                            <span class="discount-tag">50% Discount</span>
+                                        
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 12H22" stroke="#160E08" stroke-width="2"
+                                                  stroke-miterlimit="10"></path>
+                                            <path d="M15 5L22 12L15 19" stroke="#160E08" stroke-width="2"
+                                                  stroke-miterlimit="10" stroke-linecap="square"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+</div></div>
+</main>
+<div id="section-footer" data-section-id="footer">
+    <style>
+        #section-footer {
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .footer {
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
+    </style>
+
+<style>
+    .footer {
+        background-color: #171723;
+    }
+
+    .footer, .footer__block {
+        font-size: 16px;
+        color: ;
+    }
+
+    .footer .logo__text {
+        color: ;
+    }
+
+    .footer .link-list__links {
+        width: 100%;
+    }
+
+    .footer a.link-list__link {
+        color: ;
+    }
+
+    .footer .link-list__link:hover {
+        color: ;
+    }
+
+    .copyright {
+        color: ;
+    }
+
+    @media (min-width: 768px) {
+        .footer, .footer__block {
+            font-size: 18px;
+        }
+    }
+
+    .powered-by a {
+        color:  !important;
+    }
+
+    
+</style>
+
+<footer class="footer   background-dark  "
+        kjb-settings-id="sections_footer_settings_background_color">
+    <div class="footer__content">
+        <div class="container footer__container media">
+            
+                
+                        <div id="block-1555988525205" class="footer__block ">
+    <span class="copyright" kjb-settings-id="sections_footer_blocks_1555988525205_settings_copyright" role="presentation">
+  &copy; 2024 NetworkChuck
+</span>
+</div>
+                    
+            
+                
+                        
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1683474818379, [data-slick-id="1683474818379"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1683474818379 .block, [data-slick-id="1683474818379"] .block {
+        /* border settings */
+        border: 4px  black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        background-color: ;
+    
+        /* default padding for mobile */
+    
+        padding: 20px;
+    
+    
+        padding: 20px;
+    
+    
+    
+        padding: 20px;
+    
+    
+        /* mobile padding overrides */
+    
+    
+        padding-top: 0px;
+    
+    
+        padding-right: 0px;
+    
+    
+        padding-bottom: 0px;
+    
+    
+        padding-left: 0px;
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1683474818379, [data-slick-id="1683474818379"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1683474818379 .block, [data-slick-id="1683474818379"] .block {
+            /* default padding for desktop  */
+        
+            padding: 30px;
+        
+        
+        
+            padding: 30px;
+        
+        
+            /* desktop padding overrides */
+        
+        
+            padding-top: 0px;
+        
+        
+            padding-right: 0px;
+        
+        
+            padding-bottom: 0px;
+        
+        
+            padding-left: 0px;
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1683474818379, [data-slick-id="1683474818379"] {
+            text-align: center;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1683474818379"
+        class="
+  block-type--link_list
+  text-right
+  
+  col-
+  
+  
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units=""
+        
+            kjb-settings-id="sections_footer_blocks_1683474818379_settings_width"
+          >
+    <div class="block
+    box-shadow-
+    "
+        
+         data-aos="-"
+    data-aos-delay=""
+    data-aos-duration=""
+    
+>
+    
+    <style>
+    #block-1683474818379 .link-list__title {
+        color: ;
+    }
+    #block-1683474818379 .link-list__link {
+        color: ;
+    }
+</style>
+
+
+
+<div class="link-list link-list--row link-list--desktop-right link-list--mobile-center">
+    
+    <div class="link-list__links" kjb-settings-id="sections_footer_blocks_1683474818379_settings_menu">
+        
+            <a class="link-list__link" href="index.html"  >Home</a>
+        
+    </div>
+</div>
+</div>
+</div>
+
+                    
+            
+        </div>
+        
+    </div>
+
+</footer>
+
+</div>
+<div id="section-exit_pop" data-section-id="exit_pop"><style>
+    #exit-pop .modal__content {
+        background: ;
+    }
+    
+</style>
+
+
+
+
+
+
+</div>
+<div id="section-two_step" data-section-id="two_step"><style>
+    #two-step .modal__content {
+        background: ;
+    }
+    
+</style>
+
+<div class="modal two-step" id="two-step" kjb-settings-id="sections_two_step_settings_two_step_edit">
+    <div class="modal__content background-unrecognized">
+        <div class="close-x">
+            <div class="close-x__part"></div>
+            <div class="close-x__part"></div>
+        </div>
+        <div class="modal__body row text- align-items-start justify-content-left">
+            
+                
+                        
+
+
+
+
+<style>
+    /* flush setting */
+    
+    
+    /* margin settings */
+    #block-1585757543890, [data-slick-id="1585757543890"] {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    #block-1585757543890 .block, [data-slick-id="1585757543890"] .block {
+        /* border settings */
+        border: 4px none black;
+        border-radius: 4px;
+    
+
+        /* background color */
+    
+        /* default padding for mobile */
+    
+    
+    
+        /* mobile padding overrides */
+    
+    
+    
+    
+    
+    }
+
+    @media (min-width: 768px) {
+        /* desktop margin settings */
+        #block-1585757543890, [data-slick-id="1585757543890"] {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        #block-1585757543890 .block, [data-slick-id="1585757543890"] .block {
+            /* default padding for desktop  */
+        
+        
+            /* desktop padding overrides */
+        
+        
+        
+        
+        
+        }
+    }
+    /* mobile text align */
+    @media (max-width: 767px) {
+        #block-1585757543890, [data-slick-id="1585757543890"] {
+            text-align: center;
+        }
+    }
+</style>
+
+
+<div
+        id="block-1585757543890"
+        class="
+  block-type--form
+  text-center
+  
+  col-12
+  
+  
+  
+  
+  "
+        
+        data-reveal-event=""
+        data-reveal-offset=""
+        data-reveal-units=""
+        
+            kjb-settings-id="sections_two_step_blocks_1585757543890_settings_width"
+          >
+    <div class="block
+    box-shadow-none
+    "
+        
+         data-aos="-"
+    data-aos-delay=""
+    data-aos-duration=""
+    
+>
+    
+    
+
+
+
+
+
+
+
+
+<style>
+    #block-1585757543890 .form-btn {
+        border-color: #ff65be;
+        border-radius: 30px;
+        background: #ff65be;
+        color: #ffffff;
+    }
+    #block-1585757543890 .btn--outline {
+        color: #ff65be;
+        background: transparent;
+    }
+    #block-1585757543890 .disclaimer-text {
+        font-size: 16px;
+        margin-top: 1.25rem;
+        margin-bottom: 0;
+        color: #888;
+    }
+</style>
+
+
+
+<div class="form">
+    <div kjb-settings-id="sections_two_step_blocks_1585757543890_settings_text"><h4>GET THE FREE GUIDE</h4>
+<p>Enter your details below to get this free guide.</p></div>
+    
+        
+    
+</div>
+</div>
+</div>
+
+                
+            
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+<!-- Javascripts ======================================================= -->
+<script charset='ISO-8859-1' src='https://fast.wistia.com/assets/external/E-v1.js'></script>
+<script charset='ISO-8859-1' src='https://fast.wistia.com/labs/crop-fill/plugin.js'></script>
+<script src="https://kajabi-app-assets.kajabi-cdn.com/assets/encore_core-e26a6cb62fcfc401ea1b43641d358968dd6e54ed819b5475b79d1fd17a238238.js"></script>
+<script src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2155008837/assets/scripts.js?1709817190295983"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTDXZLG"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<!-- Customer JS ======================================================= -->
+<script>
+    /* Custom JS Added Via Theme Settings */
+    /* Javascript code goes here */
+</script>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentURL = window.location.href;
+        const ulLinks = document.querySelectorAll('.link-list a');
+
+        ulLinks.forEach((link) => {
+            const hrefUrl = link.href;
+
+            if ( hrefUrl === currentURL ) {
+                link.classList.add('active');
+            }
+        });
+
+        const headerAccordion = document.querySelectorAll('.accordion-item__header');
+
+        headerAccordion.forEach((header) => {
+            header.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const content = header.nextElementSibling;
+                content.classList.toggle('show');
+                header.classList.toggle('active');
+            });
+        });
+    });
+</script>
+</html>
