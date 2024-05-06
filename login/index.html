@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="account.css">
+  <link rel="icon" href="5.png" id="ll">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="#">
+      <h1>Create Account</h1>
+      <input type="text" name="full_name" placeholder="Enter your full name" required>
+      <input type="date" name="birthday" placeholder="enter your birthday" required>
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="number" name="expected_salary" placeholder="Enter your expected salary" required>
+      <input type="password" name="password" placeholder="Create a password" required>
+      <label for="termsCheckbox">I accept all terms & conditions</label>
+      <input type="checkbox" id="termsCheckbox" herf="55555S">
+      
+
+      <button>Sign Up</button>
+    </form>
+  </div>
+  <div class="form-container sign-in-container">
+    <form action="2.php" method="POST">
+      <h1>Login</h1>
+      <h1><br></h1>
+      <span></span>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <a href="#">Forgot your password?</a>
+      <button action="2.php" method="POST">Login</button>
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost" id="signIn" action=2.php>Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your details and start your journey with us</p>
+        <button class="ghost" id="signUp">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</html>
